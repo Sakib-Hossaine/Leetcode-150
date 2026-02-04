@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+    vector<int>store;
+     for( int here : nums ){
+        if(here !=val){
+          store.push_back(here);
+        }
+     }
+     for(int i =0; i<store.size();i++){
+        nums[i]=store[i];
+     }
+     return store.size();
+    }
+};
